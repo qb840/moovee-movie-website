@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moovee Hau Cung Nhi U Truyen</title>
+<!--CSS-->    
+    <link rel="stylesheet" href="css/bootstrap-4.4.1.css">
+    <link rel="stylesheet" href="css/css/all.min.css">
+
+    <link rel="stylesheet" href="css/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/details.css">
+
+
+
+<!--JAVA-->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+
+    <script src="js/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                autoplay:true,
+                loop:true,
+                items: 5,
+                autoplayTimeout:2000,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                    },
+                    580:{
+                        items:2,
+                    },
+                    850:{
+                        items:3,
+                    },
+                    1100:{
+                        items:4,
+                    },
+                    1400:{
+                        items:5,
+                    }
+                }
+            });
+            $('#dropdownMenuLink i').click(function(){
+                $(this).toggleClass('fa-bars fa-xmark')
+            })
+            $('#dangnhapicon').click(function(){
+                $(this).addClass('whitecolor')
+            })
+        });
+    </script>
+
+    
+</head>
+<body>
+<!--                                                    Header-->
+    <div class="container-fluid" id="bgheader">
+        <div class="container">
+            <div class="row">
+                <!--menu icon-->
+                <div class="col-md-3
+                            col-sm-4
+                            col-4 d-lg-none">
+                            <div class="dropdown show" id="menuicon">
+                                <a class="btn btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa-solid fa-bars"></i>
+                                </a>
+                              
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                  <a class="dropdown-item" href="trangchu.html">Trang chủ</a>
+                                  <a class="dropdown-item" href="#">Phim truyền hình</a>
+                                  <a class="dropdown-item" href="phimle.html">Phim lẻ</a>
+                                  <a class="dropdown-item" href="#">Mới và phổ biến</a>
+                                  <a class="dropdown-item" href="#">Danh sách của tôi</a>
+                                </div>
+                              </div>
+
+                </div>
+                <!--menu icon-->
+                <div class="col-xl-2
+                            col-lg-2
+                            col-md-6
+                            col-sm-4
+                            col-4" id="logoname">
+                    <a href="trangchu.html">Moovee</a>
+                </div><!--Moovee-->
+                <div class="col-xl-7
+                            col-lg-8 d-none d-lg-block" id="menu">
+                    <ul>
+                        <li><a href="trangchu.html">Trang chủ</a></li>
+                        <li><a href="">Phim truyền hình</a></li>
+                        <li><a href="phimle.html">Phim lẻ</a></li>
+                        <li><a href="">Mới và phổ biến</a></li>
+                        <li><a href="">Danh sách của tôi</a></li>
+                    </ul>
+                </div><!--searchbox-->
+                
+                <div class="col-xl-3
+                            d-none d-xl-block" id="sign">
+                    <ul>
+                        <li><a href="">Đăng ký</a></li>
+                        <li><a>|</a></li>
+                        <li><a href="">Đăng nhập</a></li>
+
+                        <div class="btn-group">
+                            <button id="searchbutton" type="button" class="btn btn-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" id="dropdown3">
+                                <FORM>
+                                    <input id="searchfill" type="text" placeholder="Tên phim, diễn viên, đạo diễn...">
+                                </FORM>
+                            </div>
+                          </div>
+                    </ul>
+                </div><!--sign-->
+
+                <!--logo search va dang nhap-->
+                <div class="col-lg-2
+                            col-md-3
+                            col-sm-4
+                            col-4 d-xl-none" id="searchdangnhap">
+                    <ul>
+
+                        <li>
+                            <div class="btn-group">
+                                <button id="dangnhapicon" type="button" class="btn btn-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa-solid fa-user"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                  <button class="dropdown-item" type="button">Đăng nhập</button>
+                                  <button class="dropdown-item" type="button">Đăng ký</button>
+                                </div>
+                              </div>
+                        </li>
+
+                        <li>
+                            <div class="btn-group">
+                                <button id="searchicon" type="button" class="btn btn-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" id="dropdown3">
+                                    <FORM>
+                                        <input id="searchfill" type="text" placeholder="Tên phim, diễn viên, đạo diễn...">
+                                    </FORM>
+                                </div>
+                              </div>
+
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div><!--row-->
+        </div><!--container-->
+    </div><!--bgheader-->
+    
+
+<!--                                            PRODUCT        -->
+<div class="container-fluid" id="productxl">
+    <div class="row">
+        <div class="col-xl-4
+                    col-lg-4
+                    d-none d-lg-block" id="productxlcontent">
+            <h3>HẬU CUNG NHI Ú TRUYỆN</h3>
+            <h6>Nhi U's Royal Love in the Palace</h6>
+            <h5>2023 &ensp; 16+ &ensp; 87 tập</h5>
+            <p>Xoay quanh những âm mưu, toan tính tranh đấu trong hậu cung, những mối quan hệ của Nhi Ú và những người đối nghịch như Phú Sát Lang Hoa, Cao Hy Nguyệt, Kim Ngọc Nghiên, Vệ Yến Uyển hoặc đồng minh như Kha Lý Diệp Đặc Hải Lan, Tô Lục Quân, Diệp Hách Na Lạp Ý Hoan, Ba Lâm Mi Nhược và Hàn Hương Kiến.</p>
+            <p>Diễn viên: Quỳnh Nhi, Thành Giang, Khánh Châu</p>
+            <p>Đạo diễn: Quốc Bảo </p>
+            <p>Thể loại: Tâm lý, Kinh dị, Bạo lực, Cổ trang</p>
+
+            <ul>
+                <li>
+                    <a href="">
+                        <div class="phatxl">
+                            <div><i class="fa-solid fa-play"></i> PHÁT</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="themvaodanhsachxl">
+                            <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div><!--product xl content-->
+        <div class="col-xl-8
+                    col-lg-8
+                    d-none d-lg-block">
+            <img id="imgxl" class="img-fluid justify-content-end" src="imgs/hậu-cung-nhi-ú-truyện.jpg">
+        </div>
+<!--                                            PRODUCT   md-sm-     -->
+
+<div class="container-fluid">
+    <div class="col-md-12
+                col-sm-12
+                col-12 d-lg-none" id="productmd">
+                <img class="img-fluid justify-content-center" src="imgs/hậu-cung-nhi-ú-truyện.jpg">
+    </div>
+</div>
+        <div class="col-md-12
+                    col-sm-12
+                    col-12
+                    d-lg-none" id="productxlcontent">
+            <h3>HẬU CUNG NHI Ú TRUYỆN</h3>
+            <h6>Nhi U's Royal Love in the Palace</h6>
+            <h5>2023 &ensp; 16+ &ensp; 87 tập</h5>
+            <p>Xoay quanh những âm mưu, toan tính tranh đấu trong hậu cung, những mối quan hệ của Nhi Ú và những người đối nghịch như Phú Sát Lang Hoa, Cao Hy Nguyệt, Kim Ngọc Nghiên, Vệ Yến Uyển hoặc đồng minh như Kha Lý Diệp Đặc Hải Lan, Tô Lục Quân, Diệp Hách Na Lạp Ý Hoan, Ba Lâm Mi Nhược và Hàn Hương Kiến.</p>
+            <p>Diễn viên: Quỳnh Nhi, Thành Giang, Khánh Châu</p>
+            <p>Đạo diễn: Quốc Bảo </p>
+            <p>Thể loại: Tâm lý, Kinh dị, Bạo lực, Cổ trang</p>
+
+            <ul>
+                <li>
+                    <a href="">
+                        <div class="phatxl">
+                            <div><i class="fa-solid fa-play"></i> PHÁT</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="themvaodanhsachxl">
+                            <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div><!--product xl content-->
+
+    </div><!--row-->
+</div><!--container-fluid" id="productxl">-->
+
+
+<!--                                          PRODUCT LIEN QUAN -->
+<div class="container-fluid" id="phimlienquan">
+        <a href=""><h5>Phim liên quan</h5></a>
+
+        <div class="owl-carousel">
+<!--                            Product1-->
+
+        <div class="productsauto">
+            <div class="khung1">
+                <a href="">
+                    <div class="phat1auto d-sm-none">
+                        <div><i class="fa-solid fa-play"></i></div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="phatauto d-none d-sm-block">
+                        <div><i class="fa-solid fa-play"></i> PHÁT</div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="themvaodanhsachauto d-none d-sm-block">
+                        <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="themvaodanhsach1auto d-sm-none">
+                        <div><i class="fa-solid fa-plus"></i></div>
+                    </div>
+                </a>
+                    <img src="imgs/vuon sao choi copy.jpg">
+            </div><!--khung 1-->
+
+            </div><!--Product1-->
+
+<!--                           Product 2-->
+<div class="productsauto">
+    <div class="khung1">
+        <a href="">
+            <div class="phat1auto d-sm-none">
+                <div><i class="fa-solid fa-play"></i></div>
+            </div>
+        </a>
+        <a href="">
+            <div class="phatauto d-none d-sm-block">
+                <div><i class="fa-solid fa-play"></i> PHÁT</div>
+            </div>
+        </a>
+        <a href="">
+            <div class="themvaodanhsachauto d-none d-sm-block">
+                <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+            </div>
+        </a>
+        <a href="">
+            <div class="themvaodanhsach1auto d-sm-none">
+                <div><i class="fa-solid fa-plus"></i></div>
+            </div>
+        </a>
+            <img src="imgs/tay du con copy.jpg">
+    </div><!--khung 1-->
+            </div><!--Product2-->
+
+                <!--                Product 3-->
+                <div class="productsauto">
+                    <div class="khung1">
+                        <a href="">
+                            <div class="phat1auto d-sm-none">
+                                <div><i class="fa-solid fa-play"></i></div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="phatauto d-none d-sm-block">
+                                <div><i class="fa-solid fa-play"></i> PHÁT</div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="themvaodanhsachauto d-none d-sm-block">
+                                <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="themvaodanhsach1auto d-sm-none">
+                                <div><i class="fa-solid fa-plus"></i></div>
+                            </div>
+                        </a>
+                            <img src="imgs/onepiece 1 copy.jpg">
+                    </div><!--khung 1-->
+    </div><!--Product3-->
+
+    <!--                Product 4-->
+    <div class="productsauto">
+        <div class="khung1">
+            <a href="">
+                <div class="phat1auto d-sm-none">
+                    <div><i class="fa-solid fa-play"></i></div>
+                </div>
+            </a>
+            <a href="">
+                <div class="phatauto d-none d-sm-block">
+                    <div><i class="fa-solid fa-play"></i> PHÁT</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="themvaodanhsachauto d-none d-sm-block">
+                    <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="themvaodanhsach1auto d-sm-none">
+                    <div><i class="fa-solid fa-plus"></i></div>
+                </div>
+            </a>
+                <img src="imgs/image copy.jpg">
+        </div><!--khung 1-->
+
+    </div><!--Product4-->
+
+            <!--                Product 5-->
+        <div class="productsauto">
+            <div class="khung1">
+                <a href="">
+                    <div class="phat1auto d-sm-none">
+                        <div><i class="fa-solid fa-play"></i></div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="phatauto d-none d-sm-block">
+                        <div><i class="fa-solid fa-play"></i> PHÁT</div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="themvaodanhsachauto d-none d-sm-block">
+                        <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="themvaodanhsach1auto d-sm-none">
+                        <div><i class="fa-solid fa-plus"></i></div>
+                    </div>
+                </a>
+                    <img src="imgs/29.jpg">
+            </div><!--khung 1-->
+            </div><!--Product 5-->
+
+
+            <!--                Product 6-->
+            <div class="productsauto">
+                <div class="khung1">
+                    <a href="">
+                        <div class="phat1auto d-sm-none">
+                            <div><i class="fa-solid fa-play"></i></div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="phatauto d-none d-sm-block">
+                            <div><i class="fa-solid fa-play"></i> PHÁT</div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="themvaodanhsachauto d-none d-sm-block">
+                            <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="themvaodanhsach1auto d-sm-none">
+                            <div><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </a>
+                        <img src="imgs/30.jpg">
+                </div><!--khung 1-->
+            </div><!--Product 6-->
+
+
+            <!--                Product 7-->
+            <div class="productsauto">
+                <div class="khung1">
+                    <a href="">
+                        <div class="phat1auto d-sm-none">
+                            <div><i class="fa-solid fa-play"></i></div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="phatauto d-none d-sm-block">
+                            <div><i class="fa-solid fa-play"></i> PHÁT</div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="themvaodanhsachauto d-none d-sm-block">
+                            <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="themvaodanhsach1auto d-sm-none">
+                            <div><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </a>
+                        <img src="imgs/31.jpg">
+                </div><!--khung 1-->
+            </div><!--Product 7-->
+
+            <!--                Product 8-->
+            <div class="productsauto">
+                <div class="khung1">
+                    <a href="">
+                        <div class="phat1auto d-sm-none">
+                            <div><i class="fa-solid fa-play"></i></div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="phatauto d-none d-sm-block">
+                            <div><i class="fa-solid fa-play"></i> PHÁT</div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="themvaodanhsachauto d-none d-sm-block">
+                            <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="themvaodanhsach1auto d-sm-none">
+                            <div><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </a>
+                        <img src="imgs/32.jpg">
+                </div><!--khung 1-->
+            </div><!--Product 8-->
+
+
+        </div><!--"owl-carousel"-->
+
+<!--                            PRODUCT CO THE BAN CUNG MUON XEM-->        
+        <a href=""><h5>Có thể bạn cũng muốn xem</h5></a>
+
+        <div class="owl-carousel">
+
+<!--                            Product1-->
+        <div class="productsauto">
+            <div class="khung1">
+                <a href="">
+                    <div class="phat1auto d-sm-none">
+                        <div><i class="fa-solid fa-play"></i></div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="phatauto d-none d-sm-block">
+                        <div><i class="fa-solid fa-play"></i> PHÁT</div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="themvaodanhsachauto d-none d-sm-block">
+                        <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="themvaodanhsach1auto d-sm-none">
+                        <div><i class="fa-solid fa-plus"></i></div>
+                    </div>
+                </a>
+                    <img src="imgs/40.jpg">
+            </div><!--khung 1-->
+
+            </div><!--Product1-->
+
+<!--                           Product 2-->
+<div class="productsauto">
+    <div class="khung1">
+        <a href="">
+            <div class="phat1auto d-sm-none">
+                <div><i class="fa-solid fa-play"></i></div>
+            </div>
+        </a>
+        <a href="">
+            <div class="phatauto d-none d-sm-block">
+                <div><i class="fa-solid fa-play"></i> PHÁT</div>
+            </div>
+        </a>
+        <a href="">
+            <div class="themvaodanhsachauto d-none d-sm-block">
+                <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+            </div>
+        </a>
+        <a href="">
+            <div class="themvaodanhsach1auto d-sm-none">
+                <div><i class="fa-solid fa-plus"></i></div>
+            </div>
+        </a>
+            <img src="imgs/41.jpg">
+    </div><!--khung 1-->
+            </div><!--Product2-->
+
+                <!--                Product 3-->
+                <div class="productsauto">
+                    <div class="khung1">
+                        <a href="">
+                            <div class="phat1auto d-sm-none">
+                                <div><i class="fa-solid fa-play"></i></div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="phatauto d-none d-sm-block">
+                                <div><i class="fa-solid fa-play"></i> PHÁT</div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="themvaodanhsachauto d-none d-sm-block">
+                                <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="themvaodanhsach1auto d-sm-none">
+                                <div><i class="fa-solid fa-plus"></i></div>
+                            </div>
+                        </a>
+                            <img src="imgs/42.jpg">
+                    </div><!--khung 1-->
+    </div><!--Product3-->
+
+    <!--                Product 4-->
+    <div class="productsauto">
+        <div class="khung1">
+            <a href="">
+                <div class="phat1auto d-sm-none">
+                    <div><i class="fa-solid fa-play"></i></div>
+                </div>
+            </a>
+            <a href="">
+                <div class="phatauto d-none d-sm-block">
+                    <div><i class="fa-solid fa-play"></i> PHÁT</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="themvaodanhsachauto d-none d-sm-block">
+                    <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="themvaodanhsach1auto d-sm-none">
+                    <div><i class="fa-solid fa-plus"></i></div>
+                </div>
+            </a>
+                <img src="imgs/43.jpg">
+        </div><!--khung 1-->
+
+    </div><!--Product4-->
+
+            <!--                Product 5-->
+        <div class="productsauto">
+            <div class="khung1">
+                <a href="">
+                    <div class="phat1auto d-sm-none">
+                        <div><i class="fa-solid fa-play"></i></div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="phatauto d-none d-sm-block">
+                        <div><i class="fa-solid fa-play"></i> PHÁT</div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="themvaodanhsachauto d-none d-sm-block">
+                        <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="themvaodanhsach1auto d-sm-none">
+                        <div><i class="fa-solid fa-plus"></i></div>
+                    </div>
+                </a>
+                    <img src="imgs/20.jpg">
+            </div><!--khung 1-->
+            </div><!--Product 5-->
+
+
+            <!--                Product 6-->
+            <div class="productsauto">
+                <div class="khung1">
+                    <a href="">
+                        <div class="phat1auto d-sm-none">
+                            <div><i class="fa-solid fa-play"></i></div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="phatauto d-none d-sm-block">
+                            <div><i class="fa-solid fa-play"></i> PHÁT</div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="themvaodanhsachauto d-none d-sm-block">
+                            <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="themvaodanhsach1auto d-sm-none">
+                            <div><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </a>
+                        <img src="imgs/21.jpg">
+                </div><!--khung 1-->
+            </div><!--Product 6-->
+
+
+            <!--                Product 7-->
+            <div class="productsauto">
+                <div class="khung1">
+                    <a href="">
+                        <div class="phat1auto d-sm-none">
+                            <div><i class="fa-solid fa-play"></i></div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="phatauto d-none d-sm-block">
+                            <div><i class="fa-solid fa-play"></i> PHÁT</div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="themvaodanhsachauto d-none d-sm-block">
+                            <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="themvaodanhsach1auto d-sm-none">
+                            <div><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </a>
+                        <img src="imgs/22.jpg">
+                </div><!--khung 1-->
+            </div><!--Product 7-->
+
+            <!--                Product 8-->
+            <div class="productsauto">
+                <div class="khung1">
+                    <a href="">
+                        <div class="phat1auto d-sm-none">
+                            <div><i class="fa-solid fa-play"></i></div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="phatauto d-none d-sm-block">
+                            <div><i class="fa-solid fa-play"></i> PHÁT</div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="themvaodanhsachauto d-none d-sm-block">
+                            <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="themvaodanhsach1auto d-sm-none">
+                            <div><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </a>
+                        <img src="imgs/23.jpg">
+                </div><!--khung 1-->
+            </div><!--Product 8-->
+        </div><!--"owl-carousel"-->        
+
+</div><!--containerfuild-->
+
+
+
+
+<!--                                             Footer-->
+    <div class="container-fluid" id="bgfooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-7
+                            col-lg-8
+                            col-mid-12
+                            col-sm-12
+                            col-12" id="social">
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                    </ul>
+                </div><!--social-->
+
+            </div><!--row-->
+            <div class="row">
+                <div class="col-xl-3
+                            col-lg-3
+                            col-md-4
+                            col-sm-6
+                            col-6 footernavi">
+                    <ul>
+                        <li><a href="">Mô tả âm thanh</a></li>
+                        <li><a href="">Quan hệ với nhà đầu tư</a></li>
+                        <li><a href="">Thông báo pháp lý</a></li>
+                    </ul>
+                </div><!--footernavi1-->
+                <div class="col-xl-3
+                            col-lg-3
+                            col-md-4
+                            col-sm-6
+                            col-6 footernavi">
+                    <ul>
+                        <li><a href="">Trung tâm trợ giúp</a></li>
+                        <li><a href="">Việc làm</a></li>
+                        <li><a href="">Tùy chọn cookie</a></li>
+                    </ul>
+                </div><!--footernavi2-->
+                <div class="col-xl-3
+                            col-lg-3
+                            col-md-4
+                            col-sm-6
+                            col-6 footernavi">
+                    <ul>
+                        <li><a href="">Thẻ quà tặng</a></li>
+                        <li><a href="">Điều khoản sử dụng</a></li>
+                        <li><a href="">Thông tin doanh nghiệp</a></li>
+                    </ul>
+                </div><!--footernavi3-->
+                <div class="col-xl-3
+                            col-lg-3
+                            col-md-4
+                            col-sm-6
+                            col-6 footernavi">
+                    <ul>
+                        <li><a href="">Trung tâm đa phương tiện</a></li>
+                        <li><a href="">Quyền riêng tư</a></li>
+                        <li><a href="">Liên hệ với chúng tôi</a></li>
+                    </ul>
+                </div><!--footernavi4-->
+            </div><!--row-->
+            <div class="row">
+                <div class="col-xl-2">
+                   <div><p id="madichvu">Mã dịch vụ</p></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-4" id="inc">
+                        <div><p>&copy; 2023 Moovee, Inc.</p></div>
+                    
+                </div><!--row-->
+            </div>
+
+        </div><!--container-->
+    </div><!--container fluid-->
+
+
+</body>
+</html>
+
+<i class="fa-solid fa-bars"></i>
+<i class="fa-solid fa-xmark"></i>
+
+

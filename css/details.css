@@ -1,0 +1,345 @@
+ .whitecolor{
+    color: #fff!important;
+ }
+ 
+ /*                                     PRODUCT         */
+#productxl{
+    background-color: #121212;
+}
+#productxlcontent{
+    color: white;
+    padding: 50px 20px 40px 40px;
+}
+#productxlcontent h3{
+    color: #CC0000;
+}
+#productxlcontent p{
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+#productxlcontent ul{
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 14px;
+}
+#productxlcontent ul li{
+    float: left;
+    padding-right: 30px;
+    padding-bottom: 10px ;
+}
+#productxlcontent ul li a{
+    list-style-type: none;
+    text-decoration: none;
+}
+.phatxl{
+    height: 40px;
+    width: 100px;
+    padding-top: 7px;
+    background-color: #CC0000;
+    color: white;
+    font-family: mytitlefont;
+    text-align: center;
+}
+.themvaodanhsachxl{
+    height: 40px;
+    width: 260px;
+    padding-top: 7px;
+    background-color: #555;
+    color: white;
+    font-family: mytitlefont;
+    text-align: center;
+}
+@media (min-width: 992px){
+    .phatxl:hover{
+        background-color: #333;
+    }
+    .themvaodanhsachxl:hover{
+        background-color: #333;
+    }
+}
+#imgxl{
+    padding: 0px 20px 20px 20px;
+}
+
+ /*              PHIM LIEN QUAN                       PRODUCT         */
+
+#phimlienquan{
+    height: 600px;
+    background-color: #121212;
+    padding: 40px 0px 40px 40px;
+    margin: 0;
+}
+#phimlienquan h5{
+    color: white;
+    margin: 0;
+    padding: 10px 0px 20px 80px;
+}
+#phimlienquan a{
+    text-decoration: none;
+}
+@media (min-width: 992px){
+    #phimlienquan h5:hover{
+        color: #CC0000!important;
+    }
+}
+.owl-carousel{
+    height: 220px;
+    padding: 0px;
+    z-index: 1;
+}
+.owl-dots{
+    height: 0;
+}
+.owl-item.active{
+display: block;
+height: auto;
+width: auto;
+}
+
+.productsauto{
+    width: 255px!important;
+    display: block;
+    overflow: hidden!important;
+}
+.khung1{
+    height: 164px;
+    width: 270px;
+    margin: 0;
+
+}
+.productsauto img{
+    height: 164px!important;
+    width: 270px!important;
+}
+#productmd{
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.phatauto{
+    display: block;
+    position: absolute;
+    background-color: #CC0000;
+    color: #ffffff;
+    text-align: center;
+    width: 54px;
+    height: 24px;
+    padding-top: 4px;
+    font-family: mytitlefont;
+    font-size: 12px;
+    right: 50%;
+    margin-right: 62px;
+    top: 50%;
+    margin-top: 44px;
+    opacity: 0;
+}
+.phatauto i{
+    
+    font-size: 10px;}
+
+@media (min-width: 992px){
+    .khung1:hover{
+        transform: scale(1.15);
+        transition: all 0.3s ease-in-out; 
+    }
+    .khung1:hover .phat{
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+    }
+    .khung1:hover .themvaodanhsach{
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+    }
+    .khung1:hover .phatauto{
+    opacity: 1;
+    transition: all 0.5s ease-in-out;}
+    .phatauto:hover{
+    background-color: #333;}
+    .khung1:hover .themvaodanhsachauto{
+            opacity: 1;
+            transition: all 0.5s ease-in-out;
+    }
+    .themvaodanhsachauto:hover{
+            background-color: #333;
+    }
+    .khung1:hover .phat1auto{
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+    }
+    .phat1auto:hover{
+        background-color: #333;
+    }
+    .khung1:hover .themvaodanhsach1auto{
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+.themvaodanhsachauto{
+    display: block;
+    position: absolute;
+    background-color: #555;
+    color: #ffffff;
+    text-align: center;
+    width: 162px;
+    height: 24px;
+    padding-top: 4px;
+    font-family: mytitlefont;
+    font-size: 12px;
+    right: 50%;
+    margin-right: -104px;
+    top: 50%;
+    margin-top: 44px;
+    opacity: 0;
+}
+.themvaodanhsachauto i{
+    font-size: 11px;
+}
+
+.phat1auto{
+    display: block;
+    position: absolute;
+    background-color: #CC0000;
+    color: #ffffff;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    padding-top: 2px;
+    font-size: 16px;
+    right: 50%;
+    margin-right: 40px;
+    top: 50%;
+    margin-top: 20px;
+    opacity: 0;
+}
+
+.themvaodanhsach1auto{
+    display: block;
+    position: absolute;
+    background-color: #555;
+    color: #ffffff;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    padding-top: 1px;
+    font-size: 18px;
+    right: 50%;
+    margin-right: -56px;
+    top: 50%;
+    margin-top: 20px;
+    opacity: 0;
+}
+
+.themvaodanhsach1auto:hover{
+    background-color: #333;
+}
+
+
+ /*                    large-1440px        products auto*/
+        @media (min-width: 1200px) and (max-width: 1439px){
+            #productxlcontent{
+                color: white;
+                padding: 20px 20px 40px 40px;
+            }
+            #productxlcontent ul li{
+                padding-bottom: 6px;
+            }
+            #imgxl{
+                padding: 40px 0px 20px 0px;
+                
+            }
+        }
+ /*                    large        products auto*/
+ @media (min-width: 992px) and (max-width: 1200px){
+    #productxl{
+        height: 670px;
+    }
+    #productxlcontent ul li{
+        padding-bottom: 6px;
+    }
+    #productxlcontent p{
+        font-size: 14px;
+    }
+    #imgxl{
+        padding: 100px 0px 20px 0px;
+    }
+ }
+
+ /*                    medium        products auto*/
+@media (min-width: 768px) and (max-width: 991px){
+    #productmd{
+    }
+    #productxl{
+        height: 950px;
+    }
+    #productxlcontent{
+        padding: 30px 40px 20px 40px;
+    }    
+    #productxlcontent p{
+        font-size: 14px;
+    }
+    #phimlienquan h5{
+        padding: 10px 0px 20px 40px;
+    
+    }
+}
+
+  /*                           small        products auto*/
+@media (min-width: 576px) and (max-width: 767px){
+    #productmd{
+    }
+    #productxl{
+        height: 800px;
+    }
+    #productxlcontent{
+        padding: 20px 40px 20px 40px;
+    }    
+    #productxlcontent p{
+        font-size: 12px;
+    }
+    #phimlienquan h5{
+        font-size: 20px;
+        padding: 10px 0px 10px 20px;
+    
+    }
+}
+
+ /*                    only extra small        products auto*/
+@media (max-width: 575px){
+    #productxl{
+        height: 670px;
+    }
+    #productxlcontent{
+        padding: 20px 40px 20px 40px;
+    } 
+    #productxlcontent p{
+        font-size: 11px;
+    }
+    #productxlcontent h3{
+        font-size: 24px!important;
+    }
+    #productxlcontent h5{
+        font-size: 18px!important;
+    }
+    #productxlcontent h6{
+        font-size: 16px!important;
+    }
+    #phimlienquan h5{
+        font-size: 18px;
+        padding: 10px 0px 10px 0px;
+    
+    }
+}
+
+
+
+
+
+
+

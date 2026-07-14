@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moovee Phim lẻ</title>
+    <link rel="stylesheet" href="css/bootstrap-4.4.1.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/css/all.min.css">
+    <link rel="stylesheet" href="css/phimle.css">
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+
+    
+</head>
+<body>
+<!--                                                    Header-->
+    <div class="container-fluid" id="bgheader">
+        <div class="container">
+            <div class="row">
+                <!--menu icon-->
+                <div class="col-md-3
+                            col-sm-4
+                            col-4 d-lg-none">
+                            <div class="dropdown show" id="menuicon">
+                                <a class="btn btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa-solid fa-bars"></i>
+                                </a>
+                              
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                  <a class="dropdown-item" href="trangchu.html">Trang chủ</a>
+                                  <a class="dropdown-item" href="#">Phim truyền hình</a>
+                                  <a class="dropdown-item" href="phimle.html">Phim lẻ</a>
+                                  <a class="dropdown-item" href="#">Mới và phổ biến</a>
+                                  <a class="dropdown-item" href="#">Danh sách của tôi</a>
+                                </div>
+                              </div>
+
+                </div>
+                <!--menu icon-->
+                <div class="col-xl-2
+                            col-lg-2
+                            col-md-6
+                            col-sm-4
+                            col-4" id="logoname">
+                    <a href="trangchu.html">Moovee</a>
+                </div><!--Moovee-->
+                <div class="col-xl-7
+                            col-lg-8 d-none d-lg-block" id="menu">
+                    <ul>
+                        <li><a href="trangchu.html">Trang chủ</a></li>
+                        <li><a href="">Phim truyền hình</a></li>
+                        <li><a href="phimle.html">Phim lẻ</a></li>
+                        <li><a href="">Mới và phổ biến</a></li>
+                        <li><a href="">Danh sách của tôi</a></li>
+                    </ul>
+                </div><!--searchbox-->
+                
+                <div class="col-xl-3
+                            d-none d-xl-block" id="sign">
+                    <ul>
+                        <li><a href="">Đăng ký</a></li>
+                        <li><a>|</a></li>
+                        <li><a href="">Đăng nhập</a></li>
+
+                        <div class="btn-group">
+                            <button id="searchbutton" type="button" class="btn btn-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" id="dropdown3">
+                                <FORM>
+                                    <input id="searchfill" type="text" placeholder="Tên phim, diễn viên, đạo diễn...">
+                                </FORM>
+                            </div>
+                          </div>
+                    </ul>
+                </div><!--sign-->
+
+                <!--logo search va dang nhap-->
+                <div class="col-lg-2
+                            col-md-3
+                            col-sm-4
+                            col-4 d-xl-none" id="searchdangnhap">
+                    <ul>
+
+                        <li>
+                            <div class="btn-group">
+                                <button id="dangnhapicon" type="button" class="btn btn-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa-solid fa-user"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                  <button class="dropdown-item" type="button">Đăng nhập</button>
+                                  <button class="dropdown-item" type="button">Đăng ký</button>
+                                </div>
+                              </div>
+                        </li>
+
+                        <li>
+                            <div class="btn-group">
+                                <button id="searchicon" type="button" class="btn btn-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" id="dropdown3">
+                                    <FORM>
+                                        <input id="searchfill" type="text" placeholder="Tên phim, diễn viên, đạo diễn...">
+                                    </FORM>
+                                </div>
+                              </div>
+
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div><!--row-->
+        </div><!--container-->
+    </div>
+    
+<!--                                                            Filter-->
+    <div class="container-fluid  d-none d-lg-block" id="filter">
+        <div class="container">
+            <div class="row"> 
+                <div class="col-xl-10 offset-xl-2 
+                            col-lg-12" id="filter1">
+                            <ul>
+                                <li>
+                                    <div class="dropdown show">
+                                        <a class="btn btn-secondary" href="#" role="button" id="dropdownmenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <div>Hình thức &emsp; <i class="fa-solid fa-angle-down"></i></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" class="menufilter">
+                                          <a class="dropdown-item" href="#">Phim lẻ</a>
+                                          <a class="dropdown-item" href="#">Phim truyền hình</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                
+                                <li>
+                                    <div class="dropdown show">
+                                        <a class="btn btn-secondary" href="#" role="button" id="dropdownmenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <div>Thể loại &emsp; <i class="fa-solid fa-angle-down"></i></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                          <a class="dropdown-item" href="#">Hành động</a>
+                                          <a class="dropdown-item" href="#">Võ thuật</a>
+                                          <a class="dropdown-item" href="#">Tình cảm</a>
+                                          <a class="dropdown-item" href="#">Hoạt hình</a>
+                                          <a class="dropdown-item" href="#">Kinh dị</a>
+                                          <a class="dropdown-item" href="#">Khoa học viễn tưởng</a>
+                                          <a class="dropdown-item" href="#">Anime</a>
+                                          <a class="dropdown-item" href="#">Hài</a>
+                                          <a class="dropdown-item" href="#">Âm nhạc & chính kịch</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="dropdown show">
+                                        <a class="btn btn-secondary" href="#" role="button" id="dropdownmenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <div>Quốc gia &emsp; <i class="fa-solid fa-angle-down"></i></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                            <a class="dropdown-item" href="#">Mỹ - Âu</a>
+                                            <a class="dropdown-item" href="#">Hàn Quốc</a>
+                                            <a class="dropdown-item" href="#">Việt Nam</a>
+                                            <a class="dropdown-item" href="#">Trung Quốc</a>
+                                            <a class="dropdown-item" href="#">Hong Kong</a>
+                                            <a class="dropdown-item" href="#">Thái Lan</a>
+                                        </div>
+                                    </div> 
+                                </li>
+
+                                <li>
+                                    <div class="dropdown show">
+                                        <a class="btn btn-secondary" href="#" role="button" id="dropdownmenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <div>Năm phát hành &nbsp; <i class="fa-solid fa-angle-down"></i></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                          <a class="dropdown-item" href="#">2023 -</a>
+                                          <a class="dropdown-item" href="#">2022</a>
+                                          <a class="dropdown-item" href="#">2021</a>
+                                          <a class="dropdown-item" href="#">2016 - 2020</a>
+                                          <a class="dropdown-item" href="#">2011 - 2015</a>
+                                          <a class="dropdown-item" href="#">2006 - 2010</a>
+                                          <a class="dropdown-item" href="#">2001 - 2005</a>
+                                          <a class="dropdown-item" href="#">Trước 2000</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="dropdown show">
+                                        <a class="btn btn-secondary" href="#" role="button" id="dropdownmenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <div>Ngôn ngữ &emsp; <i class="fa-solid fa-angle-down"></i></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                            <a class="dropdown-item" href="#">Phụ đề</a>
+                                            <a class="dropdown-item" href="#">Lồng tiếng</a>
+                                            <a class="dropdown-item" href="#">Thuyết minh</a>
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+
+                                <li>
+                                    <a href=""><div id="timkiemfilter">Tìm kiếm &emsp; <i class="fa-solid fa-magnifying-glass"></i></div></a>
+                                </li>
+
+                            </ul>
+                        </div>
+            </div>
+        </div>
+    </div>
+
+<!--                                                    filter md sm -->
+<div class="container-fluid d-lg-none" id="filternho">
+    <div class="container">
+        <div class="row" id="filternhongang">
+
+    <div class="col-md-3 offset-md-8
+                col-sm-4 offset-sm-6
+                col-5 offset-5" id="filter2"><!--filter 2-->
+
+<div class="btn-group dropleft">
+    <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownmenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Hình thức
+    </button>
+    <div class="dropdown-menu">
+      <!-- Dropdown menu links -->
+      <a class="dropdown-item" href="#">Phim lẻ</a>
+      <a class="dropdown-item" href="#">Phim truyền hình</a>
+    </div>
+  </div>
+
+<div class="btn-group dropleft">
+    <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownmenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Thể loại
+    </button>
+    <div class="dropdown-menu">
+      <!-- Dropdown menu links -->
+      <a class="dropdown-item" href="#">Hành động</a>
+      <a class="dropdown-item" href="#">Võ thuật</a>
+      <a class="dropdown-item" href="#">Tình cảm</a>
+      <a class="dropdown-item" href="#">Hoạt hình</a>
+      <a class="dropdown-item" href="#">Kinh dị</a>
+      <a class="dropdown-item" href="#">Khoa học viễn tưởng</a>
+      <a class="dropdown-item" href="#">Anime</a>
+      <a class="dropdown-item" href="#">Hài</a>
+      <a class="dropdown-item" href="#">Âm nhạc & chính kịch</a>
+    </div>
+  </div>
+
+<div class="btn-group dropleft">
+    <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownmenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Quốc gia
+    </button>
+    <div class="dropdown-menu">
+      <!-- Dropdown menu links -->
+      <a class="dropdown-item" href="#">Mỹ - Âu</a>
+      <a class="dropdown-item" href="#">Hàn Quốc</a>
+      <a class="dropdown-item" href="#">Việt Nam</a>
+      <a class="dropdown-item" href="#">Trung Quốc</a>
+      <a class="dropdown-item" href="#">Hong Kong</a>
+      <a class="dropdown-item" href="#">Thái Lan</a>
+    </div>
+  </div>
+
+<div class="btn-group dropleft">
+    <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownmenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Năm phát hành
+    </button>
+    <div class="dropdown-menu">
+      <!-- Dropdown menu links -->
+      <a class="dropdown-item" href="#">2023 -</a>
+      <a class="dropdown-item" href="#">2022</a>
+      <a class="dropdown-item" href="#">2021</a>
+      <a class="dropdown-item" href="#">2016 - 2020</a>
+      <a class="dropdown-item" href="#">2011 - 2015</a>
+      <a class="dropdown-item" href="#">2006 - 2010</a>
+      <a class="dropdown-item" href="#">2001 - 2005</a>
+      <a class="dropdown-item" href="#">Trước 2000</a>
+    </div>
+  </div>
+
+<div class="btn-group dropleft">
+    <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownmenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Ngôn ngữ
+    </button>
+    <div class="dropdown-menu">
+      <!-- Dropdown menu links -->
+      <a class="dropdown-item" href="#">Phụ đề</a>
+      <a class="dropdown-item" href="#">Lồng tiếng</a>
+      <a class="dropdown-item" href="#">Thuyết minh</a>
+    </div>
+  </div>
+
+</div><!--filter 2-->
+
+
+    <div class="col-md-1
+    col-sm-2
+    col-2">
+    <button id="timkiembutton"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+
+
+
+
+        </div><!--row  filter nho ngang-->
+    </div><!--container-->
+</div><!--filter nho-->
+
+
+<!--                                            Thanh dia chi-->
+
+<div class="container-fluid" id="thanhdiachi">
+    <div class="container">
+        <ul>
+            <li><a href="trangchu.html" id="trangchuthanhdiachi"><i class="fa-solid fa-house"></i> &nbsp; Trang chủ</a></li>
+            <li><i class="fa-solid fa-angle-right"></i></li>
+            <li><a href="phimle.html">Phim lẻ</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<!--                                                   PRODUCT         -->
+<!--                Product1-->
+<div class="container-fluid" id="product">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3
+                        col-lg-3
+                        col-md-4
+                        col-sm-6
+                        col-6 products">
+            <a href="">
+                <div class="phat1 d-sm-none">
+                    <div><i class="fa-solid fa-play"></i></div>
+                </div>
+            </a>
+            <a href="">
+                <div class="phat d-none d-sm-block">
+                    <div><i class="fa-solid fa-play"></i> PHÁT</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="themvaodanhsach d-none d-sm-block">
+                    <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="themvaodanhsach1 d-sm-none">
+                    <div><i class="fa-solid fa-plus"></i></div>
+                </div>
+            </a>
+                <a href="haucung.html"><img src="imgs/hậu-cung-nhi-ú-truyện 255x155.jpg"></a>
+        </div><!--Product1-->
+
+        <!--                Product 2-->
+        <div class="col-xl-3
+                    col-lg-3
+                    col-md-4
+                    col-sm-6
+                    col-6 products">
+                    <a href="">
+                        <div class="phat1 d-sm-none">
+                            <div><i class="fa-solid fa-play"></i></div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="phat d-none d-sm-block">
+                            <div><i class="fa-solid fa-play"></i> PHÁT</div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="themvaodanhsach d-none d-sm-block">
+                            <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="themvaodanhsach1 d-sm-none">
+                            <div><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </a>
+                <a href=""><img src="imgs/tay du con copy.jpg"></a>
+        </div><!--Product2-->
+
+        <!--                Product 3-->
+        <div class="col-xl-3
+                    col-lg-3
+                    col-md-4
+                    col-sm-6
+                    col-6 products">
+                    <a href="">
+                        <div class="phat1 d-sm-none">
+                            <div><i class="fa-solid fa-play"></i></div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="phat d-none d-sm-block">
+                            <div><i class="fa-solid fa-play"></i> PHÁT</div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="themvaodanhsach d-none d-sm-block">
+                            <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="themvaodanhsach1 d-sm-none">
+                            <div><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </a>
+                <a href=""><img src="imgs/onepiece 1 copy.jpg"></a>
+        </div><!--Product3-->
+
+        <!--                Product 4-->
+        <div class="col-xl-3
+                    col-lg-3
+                    col-md-4
+                    col-sm-6
+                    col-6 products">
+                    <a href="">
+                        <div class="phat1 d-sm-none">
+                            <div><i class="fa-solid fa-play"></i></div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="phat d-none d-sm-block">
+                            <div><i class="fa-solid fa-play"></i> PHÁT</div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="themvaodanhsach d-none d-sm-block">
+                            <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="themvaodanhsach1 d-sm-none">
+                            <div><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </a>
+                <a href=""><img src="imgs/image copy.jpg"></a>
+        </div><!--Product4-->
+
+<!--                Product 5-->
+            <div class="col-xl-3
+            col-lg-3
+            col-md-4
+            col-sm-6
+            col-6 products">
+        <a href="">
+            <div class="phat1 d-sm-none">
+                <div><i class="fa-solid fa-play"></i></div>
+            </div>
+            </a>
+            <a href="">
+            <div class="phat d-none d-sm-block">
+                <div><i class="fa-solid fa-play"></i> PHÁT</div>
+            </div>
+            </a>
+            <a href="">
+            <div class="themvaodanhsach d-none d-sm-block">
+                <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+            </div>
+            </a>
+            <a href="">
+            <div class="themvaodanhsach1 d-sm-none">
+                <div><i class="fa-solid fa-plus"></i></div>
+            </div>
+        </a>
+        <a href=""><img src="imgs/vuon sao choi copy.jpg"></a>
+    </div><!--Product 5-->
+
+
+<!--                Product 6-->
+<div class="col-xl-3
+    col-lg-3
+    col-md-4
+    col-sm-6
+    col-6 products">
+    <a href="">
+        <div class="phat1 d-sm-none">
+            <div><i class="fa-solid fa-play"></i></div>
+        </div>
+    </a>
+    <a href="">
+        <div class="phat d-none d-sm-block">
+            <div><i class="fa-solid fa-play"></i> PHÁT</div>
+        </div>
+    </a>
+    <a href="">
+        <div class="themvaodanhsach d-none d-sm-block">
+            <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+        </div>
+    </a>
+    <a href="">
+        <div class="themvaodanhsach1 d-sm-none">
+            <div><i class="fa-solid fa-plus"></i></div>
+        </div>
+    </a>
+    <a href=""><img src="imgs/7.jpg"></a>
+</div><!--Product 6-->
+
+
+<!--                Product 7-->
+<div class="col-xl-3
+    col-lg-3
+    col-md-4
+    col-sm-6
+    col-6 products">
+    <a href="">
+        <div class="phat1 d-sm-none">
+            <div><i class="fa-solid fa-play"></i></div>
+        </div>
+    </a>
+    <a href="">
+        <div class="phat d-none d-sm-block">
+            <div><i class="fa-solid fa-play"></i> PHÁT</div>
+        </div>
+    </a>
+    <a href="">
+        <div class="themvaodanhsach d-none d-sm-block">
+            <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+        </div>
+    </a>
+    <a href="">
+        <div class="themvaodanhsach1 d-sm-none">
+            <div><i class="fa-solid fa-plus"></i></div>
+        </div>
+    </a>
+    <a href=""><img src="imgs/8.jpg"></a>
+</div><!--Product 7-->
+
+<!--                Product 8-->
+<div class="col-xl-3
+    col-lg-3
+    col-md-4
+    col-sm-6
+    col-6 products">
+    <a href="">
+        <div class="phat1 d-sm-none">
+            <div><i class="fa-solid fa-play"></i></div>
+        </div>
+    </a>
+    <a href="">
+        <div class="phat d-none d-sm-block">
+            <div><i class="fa-solid fa-play"></i> PHÁT</div>
+        </div>
+    </a>
+    <a href="">
+        <div class="themvaodanhsach d-none d-sm-block">
+            <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+        </div>
+    </a>
+    <a href="">
+        <div class="themvaodanhsach1 d-sm-none">
+            <div><i class="fa-solid fa-plus"></i></div>
+        </div>
+    </a>
+    <a href=""><img src="imgs/9.jpg"></a>
+</div><!--Product 8-->
+
+<!--                Product 9-->
+<div class="col-xl-3
+            col-lg-3
+            col-md-4
+            col-sm-6
+            col-6 products">
+    <a href="">
+        <div class="phat1 d-sm-none">
+        <div><i class="fa-solid fa-play"></i></div>
+        </div>
+        </a>
+        <a href="">
+        <div class="phat d-none d-sm-block">
+        <div><i class="fa-solid fa-play"></i> PHÁT</div>
+        </div>
+        </a>
+        <a href="">
+        <div class="themvaodanhsach d-none d-sm-block">
+        <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+        </div>
+        </a>
+        <a href="">
+        <div class="themvaodanhsach1 d-sm-none">
+        <div><i class="fa-solid fa-plus"></i></div>
+        </div>
+    </a>
+    <a href=""><img src="imgs/10.jpg"></a>
+</div><!--Product 9-->
+
+<!--                Product 10-->
+<div class="col-xl-3
+            col-lg-3
+            col-md-4
+            col-sm-6
+            col-6 products">
+    <a href="">
+        <div class="phat1 d-sm-none">
+            <div><i class="fa-solid fa-play"></i></div>
+        </div>
+        </a>
+        <a href="">
+        <div class="phat d-none d-sm-block">
+            <div><i class="fa-solid fa-play"></i> PHÁT</div>
+        </div>
+        </a>
+        <a href="">
+        <div class="themvaodanhsach d-none d-sm-block">
+            <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+        </div>
+        </a>
+        <a href="">
+        <div class="themvaodanhsach1 d-sm-none">
+            <div><i class="fa-solid fa-plus"></i></div>
+        </div>
+    </a>
+    <a href=""><img src="imgs/11.jpg"></a>
+</div><!--Product 10-->
+
+<!--                Product 11-->
+<div class="col-xl-3
+            col-lg-3
+            col-md-4
+            col-sm-6
+            col-6 products">
+    <a href="">
+        <div class="phat1 d-sm-none">
+            <div><i class="fa-solid fa-play"></i></div>
+        </div>
+        </a>
+        <a href="">
+        <div class="phat d-none d-sm-block">
+            <div><i class="fa-solid fa-play"></i> PHÁT</div>
+        </div>
+        </a>
+        <a href="">
+        <div class="themvaodanhsach d-none d-sm-block">
+            <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+        </div>
+        </a>
+        <a href="">
+        <div class="themvaodanhsach1 d-sm-none">
+            <div><i class="fa-solid fa-plus"></i></div>
+        </div>
+    </a>
+    <a href=""><img src="imgs/12.jpg"></a>
+</div><!--Product 11-->
+
+
+<!--                Product 12-->
+<div class="col-xl-3
+            col-lg-3
+            col-md-4
+            col-sm-6
+            col-6 products">
+    <a href="">
+        <div class="phat1 d-sm-none">
+            <div><i class="fa-solid fa-play"></i></div>
+        </div>
+        </a>
+        <a href="">
+        <div class="phat d-none d-sm-block">
+            <div><i class="fa-solid fa-play"></i> PHÁT</div>
+        </div>
+        </a>
+        <a href="">
+        <div class="themvaodanhsach d-none d-sm-block">
+            <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+        </div>
+        </a>
+        <a href="">
+        <div class="themvaodanhsach1 d-sm-none">
+            <div><i class="fa-solid fa-plus"></i></div>
+        </div>
+    </a>
+    <a href=""><img src="imgs/24.jpg"></a>
+</div><!--Product 12-->
+
+<!--                Product 13-->
+<div class="col-xl-3
+            col-lg-3
+            col-md-4
+            col-sm-6
+            col-6 products">
+    <a href="">
+        <div class="phat1 d-sm-none">
+        <div><i class="fa-solid fa-play"></i></div>
+        </div>
+        </a>
+        <a href="">
+        <div class="phat d-none d-sm-block">
+        <div><i class="fa-solid fa-play"></i> PHÁT</div>
+        </div>
+        </a>
+        <a href="">
+        <div class="themvaodanhsach d-none d-sm-block">
+        <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+        </div>
+        </a>
+        <a href="">
+        <div class="themvaodanhsach1 d-sm-none">
+        <div><i class="fa-solid fa-plus"></i></div>
+        </div>
+    </a>
+    <a href=""><img src="imgs/20.jpg"></a>
+</div><!--Product 13-->
+
+<!--                      Product 14-->
+<div class="col-xl-3
+            col-lg-3
+            col-md-4
+            col-sm-6
+            col-6 products">
+    <a href="">
+        <div class="phat1 d-sm-none">
+            <div><i class="fa-solid fa-play"></i></div>
+        </div>
+        </a>
+        <a href="">
+        <div class="phat d-none d-sm-block">
+            <div><i class="fa-solid fa-play"></i> PHÁT</div>
+        </div>
+        </a>
+        <a href="">
+        <div class="themvaodanhsach d-none d-sm-block">
+            <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+        </div>
+        </a>
+        <a href="">
+        <div class="themvaodanhsach1 d-sm-none">
+            <div><i class="fa-solid fa-plus"></i></div>
+        </div>
+    </a>
+    <a href=""><img src="imgs/21.jpg"></a>
+</div><!--Product 14-->
+
+<!--                      Product 15-->
+<div class="col-xl-3
+            col-lg-3
+            col-md-4
+            col-sm-6
+            col-6 products">
+    <a href="">
+        <div class="phat1 d-sm-none">
+            <div><i class="fa-solid fa-play"></i></div>
+        </div>
+        </a>
+        <a href="">
+        <div class="phat d-none d-sm-block">
+            <div><i class="fa-solid fa-play"></i> PHÁT</div>
+        </div>
+        </a>
+        <a href="">
+        <div class="themvaodanhsach d-none d-sm-block">
+            <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+        </div>
+        </a>
+        <a href="">
+        <div class="themvaodanhsach1 d-sm-none">
+            <div><i class="fa-solid fa-plus"></i></div>
+        </div>
+    </a>
+    <a href=""><img src="imgs/22.jpg"></a>
+</div><!--Product 15-->
+
+<!--                      Product 16-->
+<div class="col-xl-3
+            col-lg-3
+            col-md-4
+            col-sm-6
+            col-6 products">
+    <a href="">
+        <div class="phat1 d-sm-none">
+            <div><i class="fa-solid fa-play"></i></div>
+        </div>
+        </a>
+        <a href="">
+        <div class="phat d-none d-sm-block">
+            <div><i class="fa-solid fa-play"></i> PHÁT</div>
+        </div>
+        </a>
+        <a href="">
+        <div class="themvaodanhsach d-none d-sm-block">
+            <div><i class="fa-solid fa-plus"></i> THÊM VÀO DANH SÁCH</div>
+        </div>
+        </a>
+        <a href="">
+        <div class="themvaodanhsach1 d-sm-none">
+            <div><i class="fa-solid fa-plus"></i></div>
+        </div>
+    </a>
+    <a href=""><img src="imgs/30.jpg"></a>
+</div><!--Product 16-->
+
+</div><!--row-->
+    </div><!--container-->
+</div><!--containerfuild-->
+
+<!--                                                            PAGE NUMBER-->
+<div class="container-fluid">
+        <div class="row justify-content-center" id="page">
+            <ul>
+                <li><a href=""><i class="fa-solid fa-angle-left"></i></a></li>
+                <li><a href=""><div>1</div></a></li>
+                <li><a href=""><div>2</div></a></li>
+                <li><a href=""><div>3</div></a></li>
+                <li><a href=""><div>4</div></a></li>
+                <li><a href=""><div>5</div></a></li>
+                <li><a href=""><i class="fa-solid fa-angle-right"></i></a></li>
+            </ul>
+        </div>
+</div>
+
+
+
+
+<!--                                             Footer-->
+    <div class="container-fluid" id="bgfooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-7
+                            col-lg-8
+                            col-mid-12
+                            col-sm-12
+                            col-12" id="social">
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                    </ul>
+                </div><!--social-->
+
+            </div><!--row-->
+            <div class="row">
+                <div class="col-xl-3
+                            col-lg-3
+                            col-md-4
+                            col-sm-6
+                            col-6 footernavi">
+                    <ul>
+                        <li><a href="">Mô tả âm thanh</a></li>
+                        <li><a href="">Quan hệ với nhà đầu tư</a></li>
+                        <li><a href="">Thông báo pháp lý</a></li>
+                    </ul>
+                </div><!--footernavi1-->
+                <div class="col-xl-3
+                            col-lg-3
+                            col-md-4
+                            col-sm-6
+                            col-6 footernavi">
+                    <ul>
+                        <li><a href="">Trung tâm trợ giúp</a></li>
+                        <li><a href="">Việc làm</a></li>
+                        <li><a href="">Tùy chọn cookie</a></li>
+                    </ul>
+                </div><!--footernavi2-->
+                <div class="col-xl-3
+                            col-lg-3
+                            col-md-4
+                            col-sm-6
+                            col-6 footernavi">
+                    <ul>
+                        <li><a href="">Thẻ quà tặng</a></li>
+                        <li><a href="">Điều khoản sử dụng</a></li>
+                        <li><a href="">Thông tin doanh nghiệp</a></li>
+                    </ul>
+                </div><!--footernavi3-->
+                <div class="col-xl-3
+                            col-lg-3
+                            col-md-4
+                            col-sm-6
+                            col-6 footernavi">
+                    <ul>
+                        <li><a href="">Trung tâm đa phương tiện</a></li>
+                        <li><a href="">Quyền riêng tư</a></li>
+                        <li><a href="">Liên hệ với chúng tôi</a></li>
+                    </ul>
+                </div><!--footernavi4-->
+            </div><!--row-->
+            <div class="row">
+                <div class="col-xl-2">
+                   <div><p id="madichvu">Mã dịch vụ</p></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-4" id="inc">
+                        <div><p>&copy; 2023 Moovee, Inc.</p></div>
+                    
+                </div><!--row-->
+            </div>
+
+        </div><!--container-->
+    </div><!--container fluid-->
+
+
+
+</body>
+</html>
+
+
+
+
